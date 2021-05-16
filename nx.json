@@ -1,0 +1,38 @@
+{
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "angular-monorepo-demo-university",
+  "projects": {
+    "angular-monorepo-demo-university": {
+      "tags": []
+    },
+    "angular-monorepo-demo-university-e2e": {
+      "tags": [],
+      "implicitDependencies": ["angular-monorepo-demo-university"]
+    },
+    "course-feature-course": {
+      "tags": ["scope:course", "type:feature"]
+    },
+    "curriculum-feature-curriculum-list": {
+      "tags": ["scope:curriculum", "type:feature"]
+    },
+    "shared-ui": {
+      "tags": ["scope:shared", "type:ui"]
+    },
+    "shared-util": {
+      "tags": ["scope:shared", "type:util"]
+    },
+    "shared-model": {
+      "tags": ["scope:shared", "type:model"]
+    }
+  }
+}
