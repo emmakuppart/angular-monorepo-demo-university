@@ -1,0 +1,13 @@
+<demo-table [rows]="curriculums"
+            [columns]="columns"
+            [rowTemplate]="rowTemplate">
+</demo-table>
+
+<ng-template #rowTemplate let-row="row">
+    <tr>
+        <td>{{ row.id }}</td>
+        <td>{{ row.name }}</td>
+        <td>{{ row.duration + ' ' + (row.durationType | translate) }}</td>
+        <td>{{ row.institute | institute }}</td>
+    </tr>
+</ng-template>

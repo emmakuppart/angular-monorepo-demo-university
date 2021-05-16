@@ -1,0 +1,14 @@
+<demo-table [rows]="courses"
+            [columns]="columns"
+            [rowTemplate]="rowTemplate">
+</demo-table>
+
+<ng-template #rowTemplate let-row="row">
+    <tr>
+        <td scope="row">{{ row.id }}</td>
+        <td scope="row">{{ row.name }}</td>
+        <td scope="row">{{ row.professor }}</td>
+        <td scope="row">{{ row.institute | institute }}</td>
+        <td><demo-register-button [disabled]="row.registered" (clicked)="register(row)"></demo-register-button></td>
+    </tr>
+</ng-template>

@@ -1,0 +1,15 @@
+{
+  "id": "id",
+  "name": "nimi",
+  "professor": "õppejõud",
+  "institute": "instituut",
+  "duration": "kestvus",
+  "institute.chemistry": "keemia instituut",
+  "institute.physics": "füüsika instituut",
+  "institute.medicine": "meditsiini instituut",
+  "institute.art": "kunsti instituut",
+  "institute.philosophy": "filosoofia instituut",
+  "year": "aastat",
+  "semester": "semestrit",
+  "register": "registreerun"
+}
