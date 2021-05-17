@@ -9,6 +9,8 @@ import { CurriculumService } from './curriculum.service';
 export class CurriculumTableComponent implements OnInit {
   readonly columns = ['id', 'name', 'duration', 'institute'];
 
+  readonly muutuja = 'a';
+
   curriculums = this.service.getCurriculums();
 
   constructor(private service: CurriculumService) { }
