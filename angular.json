@@ -267,6 +267,31 @@
           }
         }
       }
+    },
+    "course-data-access": {
+      "projectType": "library",
+      "root": "libs/course/data-access",
+      "sourceRoot": "libs/course/data-access/src",
+      "prefix": "angular-monorepo-demo-university",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/course/data-access"],
+          "options": {
+            "jestConfig": "libs/course/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/course/data-access/src/**/*.ts",
+              "libs/course/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "schematics": {

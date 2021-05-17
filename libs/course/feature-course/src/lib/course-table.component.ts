@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CourseService } from './course.service';
-import { Course } from './course';
+import { Course } from '../../../data-access/src/lib/course';
+import { CourseFacade } from '@angular-monorepo-demo-university/course/data-access';
 
 @Component({
   selector: 'demo-course-table',
@@ -10,13 +10,13 @@ import { Course } from './course';
 export class CourseTableComponent implements OnInit {
   readonly columns = ['id', 'name', 'professor', 'institute', ''];
 
-  courses = this.service.getCourses();
+  courses = this.facade.init();
 
-  constructor(private service: CourseService) {}
+  constructor(private facade: CourseFacade) {}
 
   ngOnInit(): void {}
 
   register(row: Course): void {
-    this.courses = this.service.register(row.id);
+    this.courses = this.facade.register(row.id);
   }
 }

@@ -30,6 +30,9 @@
       ],
       "@angular-monorepo-demo-university/shared/model": [
         "libs/shared/model/src/index.ts"
+      ],
+      "@angular-monorepo-demo-university/course/data-access": [
+        "libs/course/data-access/src/index.ts"
       ]
     },
     "rootDir": "."

@@ -4,9 +4,15 @@ import { SharedUiModule } from '@angular-monorepo-demo-university/shared/ui';
 import { RegisterButtonComponent } from './register-button/register-button.component';
 import { SharedUtilModule } from '@angular-monorepo-demo-university/shared/util';
 import { CourseFeatureCourseRoutingModule } from './course-feature-course-routing.module';
+import { CourseDataAccessModule } from '@angular-monorepo-demo-university/course/data-access';
 
 @NgModule({
-  imports: [SharedUiModule, SharedUtilModule, CourseFeatureCourseRoutingModule],
+  imports: [
+    CourseDataAccessModule,
+    SharedUiModule,
+    SharedUtilModule,
+    CourseFeatureCourseRoutingModule
+  ],
   declarations: [CourseTableComponent, RegisterButtonComponent],
   exports: [CourseTableComponent]
 })

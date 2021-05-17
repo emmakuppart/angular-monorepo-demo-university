@@ -5,5 +5,6 @@ module.exports = {
     '<rootDir>/libs/shared/ui',
     '<rootDir>/libs/shared/util',
     '<rootDir>/libs/shared/model',
+    '<rootDir>/libs/course/data-access',
   ],
 };
