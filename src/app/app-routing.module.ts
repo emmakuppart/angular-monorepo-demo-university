@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CourseTableComponent } from './course-table/course-table.component';
-import { CurriculumTableComponent } from './curriculum-table/curriculum-table.component';
 
 const routes: Routes = [
-  { path: 'courses', component: CourseTableComponent },
-  { path: 'curriculums', component: CurriculumTableComponent }
+  {
+    path: 'courses',
+    loadChildren: () => import('src/app/course-table/course-table.module').then((m) => m.CourseTableModule)
+  },
+  {
+    path: 'curriculums',
+    loadChildren: () => import('src/app/curriculum-table/curriculum-table.module').then((m) => m.CurriculumTableModule)
+  }
 ];
 
 @NgModule({
